@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value, // props包含了所有在Counters中为counter设置的属性
+    value: this.props.counter.value, // props包含了所有在Counters中为counter设置的属性
   };
   // 不能直接this.state.value++, 虽然数字增加了，但是react看不见
   handleIncrement = () => {
@@ -10,8 +10,6 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -23,7 +21,8 @@ class Counter extends Component {
           Increment
         </button>
         <button
-          onClick={this.props.onDelete}
+          // 如果要传参数进去要用Arrow
+          onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
         >
           Delete
