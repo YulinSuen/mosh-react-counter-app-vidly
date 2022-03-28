@@ -1,3 +1,11 @@
+## Mosh 的课程文件，每一次 commit 对应开始的章节, 你可以从任意章节开始并创建自己的分支
+
+In the project directory, you can run:
+
+### `git log --oneline`
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
