@@ -4,6 +4,12 @@ In the project directory, you can run:
 
 ### `git log --oneline`
 
+可以把组件生命周期大致分为三个阶段：
+第一阶段：是组件第一次绘制阶段，如图中的上面虚线框内，在这里完成了组件的加载和初始化；
+第二阶段：是组件在运行和交互阶段，如图中左下角虚线框，这个阶段组件可以处理用户交互，或者接收事件更新界面；
+第三阶段：是组件卸载消亡的阶段，如图中右下角的虚线框中，这里做一些组件的清理工作。
+https://blog.csdn.net/weixin_43851769/article/details/88188325
+
 ---
 
 # Getting Started with Create React App
