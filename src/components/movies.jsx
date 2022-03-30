@@ -35,8 +35,9 @@ class Movies extends Component {
     this.setState({ currentPage: page });
   };
 
+  // Every time we seclect a genre, the ListGroup will be rerendered.
   handleGenreSelect = (genre) => {
-    console.log(genre);
+    this.setState({ selectedGenre: genre });
   };
 
   render() {
@@ -52,6 +53,7 @@ class Movies extends Component {
         <div className="col-3">
           <ListGroup
             items={this.state.genres}
+            selectedItem={this.state.selectedGenre}
             onItemSelect={this.handleGenreSelect}
           />
         </div>
