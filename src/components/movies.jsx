@@ -4,7 +4,7 @@ import Like from "./common/like";
 import Pagination from "./common/pagination";
 
 class Movies extends Component {
-  state = { movies: getMovies(), pageSize: 4 };
+  state = { movies: getMovies(), pageSize: 10 };
 
   handleDelete = (movie) => {
     const movies = this.state.movies.filter((m) => m._id !== movie._id);
