@@ -19,7 +19,8 @@ class LoginForm extends Form {
       const { data } = this.state;
       const { data: jwt } = await login(data.username, data.password);
       localStorage.setItem("token", jwt);
-      this.props.history.push("/"); //重定向到主页
+      // this.props.history.push("/"); //重定向到主页
+      window.location = "/"; //强制重定向,因为Mount只加载一次
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
